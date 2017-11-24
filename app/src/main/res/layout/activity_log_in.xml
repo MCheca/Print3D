@@ -1,0 +1,85 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    tools:context="com.example.usuario.prueba1.LogIn">
+
+    <!-- Login progress -->
+    <ProgressBar
+        android:id="@+id/login_progress"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:visibility="gone" />
+
+    <ImageView
+        android:layout_width="400dp"
+        android:layout_height="150dp"
+        android:id="@+id/logo"
+        android:src="@drawable/logo"
+        />
+
+
+    <AutoCompleteTextView
+        android:id="@+id/email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:layout_below="@+id/logo"
+        android:maxLines="1"
+        android:singleLine="true" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Contraseña"
+        android:layout_below="@+id/email"
+        android:imeOptions="actionUnspecified"
+        android:inputType="textPassword"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:layout_marginTop="25dp" />
+
+    <Button
+        android:id="@+id/inicias"
+        style="?android:textAppearanceSmall"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/password"
+        android:text="Inicio de sesión"
+        android:textStyle="bold"
+        android:background="#2E86C1"
+        android:layout_weight="0.19"
+        android:textColor="@color/abc_input_method_navigation_guard"
+        android:onClick="iniciosesion"/>
+
+
+
+    <Button
+        android:id="@+id/registrate"
+        style="?android:textAppearanceSmall"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/inicias"
+        android:text="¿Eres nuevo? Regístrate"
+        android:background="#2E86C1"
+        android:textStyle="bold"
+        android:layout_marginRight="0dp"
+        android:textColor="@color/abc_input_method_navigation_guard"
+        android:onClick="cambioregistro"/>
+
+
+</RelativeLayout>
+
+

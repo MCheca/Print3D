@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    tools:context="com.example.usuario.prueba1.Home">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="¿Que quieres hacer?"
+        android:id="@+id/quehacer"
+        android:textSize="30sp"
+        android:layout_below="@+id/logo"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="400dp"
+        android:layout_height="180dp"
+        android:id="@+id/logo"
+        android:src="@drawable/logo"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+
+    <Button
+        android:id="@+id/registra"
+        style="?android:textAppearanceSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/quehacer"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="42dp"
+        android:text="Registrarse"
+        android:textStyle="bold"
+        android:background="#2E86C1"
+        android:textColor="@color/abc_input_method_navigation_guard"
+        android:onClick="cambioregistro"/>
+
+    <Button
+        android:id="@+id/inicia"
+        style="?android:textAppearanceSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/registra"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="42dp"
+        android:text="Iniciar Sesion"
+        android:textStyle="bold"
+        android:background="#2E86C1"
+        android:textColor="@color/abc_input_method_navigation_guard"
+        android:onClick="cambiologin"/>
+
+</RelativeLayout>
+
+
