@@ -38,8 +38,9 @@
         android:layout_marginTop="42dp"
         android:text="Registrarse"
         android:textStyle="bold"
-        android:background="#2E86C1"
-        android:textColor="@color/abc_input_method_navigation_guard"
+        android:background="@drawable/formabtn"
+        android:textColor="#FFFFFF"
+        android:textSize="25sp"
         android:onClick="cambioregistro"/>
 
     <Button
@@ -52,8 +53,9 @@
         android:layout_marginTop="42dp"
         android:text="Iniciar Sesion"
         android:textStyle="bold"
-        android:background="#2E86C1"
-        android:textColor="@color/abc_input_method_navigation_guard"
+        android:background="@drawable/formabtn"
+        android:textColor="#FFFFFF"
+        android:textSize="25sp"
         android:onClick="cambiologin"/>
 
 </RelativeLayout>
