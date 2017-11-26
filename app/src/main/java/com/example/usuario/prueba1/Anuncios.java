@@ -3,8 +3,11 @@ package com.example.usuario.prueba1;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.LayoutInflater;
+import android.view.ViewGroup;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
+import android.widget.TextView;
 
 import com.example.jumanji.prueba1.R;
 
@@ -13,6 +16,8 @@ import java.util.HashMap;
 import java.util.List;
 
 public class Anuncios extends AppCompatActivity {
+
+
 
     // Array of strings for ListView Title
     String[] listviewTitle = new String[]{
@@ -52,5 +57,9 @@ public class Anuncios extends AppCompatActivity {
         SimpleAdapter simpleAdapter = new SimpleAdapter(getBaseContext(), aList, R.layout.listview_activity, from, to);
         ListView androidListView = (ListView) findViewById(R.id.list_view);
         androidListView.setAdapter(simpleAdapter);
+        // Add a header to the ListView
+        LayoutInflater inflater = getLayoutInflater();
+        ViewGroup header = (ViewGroup)inflater.inflate(R.layout.listview_header,androidListView,false);
+        androidListView.addHeaderView(header);
     }
 }
