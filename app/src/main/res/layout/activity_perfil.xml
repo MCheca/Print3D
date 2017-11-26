@@ -1,0 +1,103 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingBottom="1dp"
+    tools:context="com.example.usuario.prueba1.Perfil">
+
+
+    <ImageView
+        android:id="@+id/header_cover_image"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/header"
+        app:srcCompat="@drawable/header" />
+
+    <ImageView
+        android:id="@+id/user_profile_photo"
+        android:layout_width="240dp"
+        android:layout_height="120dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="139dp"
+        android:adjustViewBounds="false"
+        android:cropToPadding="false"
+        android:src="@drawable/profile"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/usuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/user_profile_photo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:text="Pepe Viyuela"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/trabajos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/usuario"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="19dp"
+        android:text="Trabajos realizados"
+        android:textAllCaps="true"
+        android:textSize="20sp"
+        android:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/trabajo1"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/trabajo2"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        app:srcCompat="@drawable/img2" />
+
+    <TextView
+        android:id="@+id/tcen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/trabajos"
+        android:layout_marginTop="5dp"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:id="@+id/trabajo2"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_alignLeft="@+id/tcen"
+        android:layout_alignStart="@+id/tcen"
+        android:layout_alignTop="@+id/tcen"
+        app:srcCompat="@drawable/img1" />
+    <Button
+        android:id="@+id/contact"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/trabajo2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-10dp"
+        android:text="Contacta"
+        android:textStyle="bold"
+        android:background="#2E86C1"
+        android:onClick="mail"
+        android:textColor="@color/abc_input_method_navigation_guard" />
+    <TextView
+        android:id="@+id/contacta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/trabajo2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="Contacto: pepeviyuela@gmail.com" />
+
+</RelativeLayout>
