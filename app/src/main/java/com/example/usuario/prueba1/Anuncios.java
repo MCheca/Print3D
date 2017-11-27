@@ -21,8 +21,6 @@ import java.util.List;
 
 public class Anuncios extends AppCompatActivity {
 
-    ListView lv = (ListView) findViewById(R.id.list_view);
-
     // Array of strings for ListView Title
     String[] listviewTitle = new String[]{
             "Mano para Sara", "Yoda", "ListView Title 3", "ListView Title 4",
@@ -31,18 +29,17 @@ public class Anuncios extends AppCompatActivity {
 
 
     int[] listviewImage = new int[]{
-            R.drawable.mano, R.drawable.yoda, R.drawable.img1, R.drawable.img1,
-            R.drawable.img1, R.drawable.img1, R.drawable.img1, R.drawable.img1,
+            R.drawable.mano, R.drawable.yoda,  R.drawable.mano, R.drawable.yoda,
+            R.drawable.mano, R.drawable.yoda,  R.drawable.mano, R.drawable.yoda,
     };
 
     String[] listviewShortDescription = new String[]{
-            "Sara necesita una mano nueva", "Tengo tiempo libre y quiero un Yoda en 3D", "Android ListView Short Description", "Android ListView Short Description",
-            "Android ListView Short Description", "Android ListView Short Description", "Android ListView Short Description", "Android ListView Short Description",
+            "Sara necesita una mano nueva", "Tengo tiempo libre y quiero un Yoda en 3D", "Sara necesita una mano nueva", "Tengo tiempo libre y quiero un Yoda en 3D",
+            "Sara necesita una mano nueva", "Tengo tiempo libre y quiero un Yoda en 3D", "Sara necesita una mano nueva", "Tengo tiempo libre y quiero un Yoda en 3D",
     };
 
     String[] listviewPresupuesto = new String[]{
-            "150€", "15€", "Android ListView Short Description", "Android ListView Short Description",
-            "Android ListView Short Description", "Android ListView Short Description", "Android ListView Short Description", "Android ListView Short Description",
+            "150€", "15€","150€", "15€", "150€", "15€", "150€", "15€",
     };
 
     @Override
