@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingBottom="1dp"
+    tools:context="com.example.usuario.prueba1.Proyecto">
+
+
+    <include layout="@layout/barra"/>
+    <ImageView
+        android:id="@+id/trabajo1"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="100dp"
+        app:srcCompat="@drawable/yodaicono" />
+
+    <Button
+        android:id="@+id/usu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/pres"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/formabtn"
+        android:text="Contactar"
+        android:textSize="20dp"
+        android:onClick="mail"
+        android:textColor="#fff" />
+
+    <TextView
+        android:id="@+id/nom"
+        android:textColor="#000"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/trabajo1"
+        android:layout_centerHorizontal="true"
+        android:text="Proyecto"
+        android:layout_marginTop="30dp"
+        android:textSize="30sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/des"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nom"
+        android:layout_marginTop="25dp"
+        android:layout_centerHorizontal="true"
+        android:text="Descripción del proyecto​"
+        android:textColor="#000" />
+
+    <TextView
+        android:id="@+id/pres"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/des"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="38dp"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textStyle="bold"/>
+
+</RelativeLayout>

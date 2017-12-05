@@ -2,52 +2,54 @@ package com.example.usuario.prueba1;
 
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.drawable.BitmapDrawable;
-import android.graphics.drawable.Drawable;
-import android.net.Uri;
-import android.os.Bundle;
-import android.support.v4.graphics.drawable.RoundedBitmapDrawable;
-import android.support.v4.graphics.drawable.RoundedBitmapDrawableFactory;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
+import android.os.Bundle;
 import android.view.View;
-import android.widget.ImageView;
-import android.widget.Toast;
+import android.widget.TextView;
 
 import com.example.jumanji.prueba1.R;
 
-
 public class Perfil extends AppCompatActivity {
+
+    private TextView usuario,correo;
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_perfil);
-
-
-    }
-    //Metodo que abre envio de email
-    public void mail(View v){
-        String[] TO = {"marcoscheca1@hotmail.com"}; //Direcciones email  a enviar.
-        String[] CC = {"marcoscheca1@hotmail.com"}; //Direcciones email con copia.
-
-        Intent emailIntent = new Intent(Intent.ACTION_SEND);
-
-        emailIntent.setData(Uri.parse("mailto:"));
-        emailIntent.setType("text/plain");
-        emailIntent.putExtra(Intent.EXTRA_EMAIL, TO);
-        emailIntent.putExtra(Intent.EXTRA_CC, CC);
-        emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Asunto de prueba");
-        emailIntent.putExtra(Intent.EXTRA_TEXT, "Quiero imprimir esto, puedes hacerlo?"); // * configurar email aquí!s
-
-        try {
-            startActivity(Intent.createChooser(emailIntent, "Enviar email."));
-            Log.i("EMAIL", "Enviando email...");
+        Usuario user= LogIn.getUser();
+        if(user.getCuenta().equals("Interesado")) {
+            setContentView(R.layout.activity_perfil);
+            String corr=LogIn.getUser().getCorreo();
+            String nombre=LogIn.getUser().getNombre();
+            usuario=findViewById(R.id.usuario5);
+            correo=findViewById(R.id.contacto);
+            usuario.setText(nombre);
+            correo.setText(corr);
         }
-        catch (android.content.ActivityNotFoundException e) {
-            Toast.makeText(this, "NO existe ningún cliente de email instalado!.", Toast.LENGTH_SHORT).show();
+        else{
+            setContentView(R.layout.activity_perfil);
+            String corr=LogIn.getUser().getCorreo();
+            String nombre=LogIn.getUser().getNombre();
+            usuario=findViewById(R.id.usuario5);
+            correo=findViewById(R.id.contacto);
+            usuario.setText(nombre);
+            correo.setText(corr);
         }
     }
+
+
+    public void anuncios(View v){
+        Intent registro2 = new Intent(Perfil.this, Epedido.class);
+        startActivity(registro2);
+    }
+
+    public void mios (View v){
+        Intent registro2 = new Intent(Perfil.this, Mpedidos.class);
+        startActivity(registro2);
+    }
+
+
     //Metodo que abre Pop Up
     public void PopUp(View v){
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -63,4 +65,11 @@ public class Perfil extends AppCompatActivity {
         AlertDialog alert = builder.create();
         alert.show();
     }
+
+    public void menu(View v){
+        Intent registro =new Intent(Perfil.this, MenuInicio.class);
+        startActivity(registro);
+    }
+
+
 }

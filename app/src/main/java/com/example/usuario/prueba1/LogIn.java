@@ -10,12 +10,12 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.usuario.prueba1.AdministradorOpenHelper;
 import com.example.jumanji.prueba1.R;
 
 public class LogIn extends AppCompatActivity {
 
     private EditText nombre,contra;
+    public static Usuario user;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,24 +33,41 @@ public class LogIn extends AppCompatActivity {
                 "usuarios", null, 2);
         SQLiteDatabase bd = admin.getWritableDatabase();
         String correo = nombre.getText().toString();
-        Cursor fila = bd.rawQuery(
-                "select usuario,contraseña from usuarios where email='" + correo+"'", null);
+        if(!correo.equals("")) {
+            Cursor fila = bd.rawQuery(
+                    "select usuario,contraseña, cuenta from usuarios where email='" + correo + "'", null);
 
-        if (fila.moveToFirst()) {
-            String confirmar=contra.getText().toString();
-            String confi=fila.getString(1);
-            if(confirmar.equals(confi)){
-                Toast.makeText(this, "Has iniciado sesion",
+            if (fila.moveToFirst()) {
+                String confirmar = contra.getText().toString();
+                if(!confirmar.equals("")) {
+                    String confi = fila.getString(1);
+                    if (confirmar.equals(confi)) {
+                        Toast.makeText(this, "Has iniciado sesion",
+                                Toast.LENGTH_SHORT).show();
+                        //AQUI SE CAMBIA DE XML
+
+
+                        user = new Usuario(fila.getString(0),correo,fila.getString(2));
+                        Intent registro2 = new Intent(LogIn.this, MenuInicio.class);
+                        startActivity(registro2);
+
+                    } else {
+                        Toast.makeText(this, "La contraseña no es correcta",
+                                Toast.LENGTH_SHORT).show();
+                    }
+                }
+                else{
+                    Toast.makeText(this, "No has introducido contraseña",
+                            Toast.LENGTH_SHORT).show();
+                }
+            } else
+                Toast.makeText(this, "El email no es correcto",
                         Toast.LENGTH_SHORT).show();
-                //AQUI SE CAMBIA DE XML
-
-                Intent registro2 = new Intent(LogIn.this, Ventas.class);
-                startActivity(registro2);
-
-            }
-        } else
-            Toast.makeText(this, "El email no es correcto",
+        }
+        else{
+            Toast.makeText(this, "No has introducido el correo",
                     Toast.LENGTH_SHORT).show();
+        }
         bd.close();
     }
 
@@ -66,5 +83,8 @@ public class LogIn extends AppCompatActivity {
         });
     }
 
-}
+    public static Usuario getUser(){
+        return user;
+    }
 
+}

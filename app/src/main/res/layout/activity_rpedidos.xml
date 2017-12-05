@@ -1,0 +1,93 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    tools:context="com.example.usuario.prueba1.Rpedidos">
+
+    <!-- Login progress -->
+    <ProgressBar
+        android:id="@+id/login_progress"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:visibility="gone" />
+
+
+    <include layout="@layout/barra"/>
+
+    <TextView
+        android:id="@+id/publica"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="¡Publica tu anuncio!"
+        android:layout_below="@id/logo"
+        android:layout_marginTop="120dp"
+        android:textSize="35sp"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/abc_input_method_navigation_guard" />
+
+
+    <EditText
+        android:id="@+id/nombre2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nombre del anuncio"
+        android:layout_below="@+id/publica"
+        android:layout_marginTop="25dp"
+        android:inputType="textLongMessage"
+        android:maxLines="1"
+        android:singleLine="true" />
+
+
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nombre2"
+        android:layout_marginTop="5dp"
+        android:hint="Descripción del proyecto"
+        android:maxLength="280"
+        android:inputType="text"
+        android:ems="10"
+        android:id="@+id/desc2" />
+
+
+
+
+    <AutoCompleteTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Presupuesto"
+        android:inputType="number"
+        android:layout_below="@+id/desc2"
+        android:layout_marginTop="5dp"
+        android:ems="10"
+        android:id="@+id/presupuesto2" />
+
+
+
+    <Button
+        android:id="@+id/registro"
+        style="?android:textAppearanceSmall"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/presupuesto2"
+        android:layout_marginTop="40dp"
+        android:text="¡Publicar anuncio!"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:background="@drawable/formabtn"
+        android:onClick="registro"/>
+
+</RelativeLayout>
+

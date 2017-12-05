@@ -41,7 +41,6 @@
 
 
 
-
     <AutoCompleteTextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -107,7 +106,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/tipo"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="55dp"
         android:text="Registrarse"
         android:textStyle="bold"
         android:background="@drawable/formabtn"
@@ -115,16 +114,22 @@
         android:textSize="25sp"
         android:onClick="registro"/>
 
-    <TextView
+
+
+    <CheckBox
+        android:id="@+id/checkBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/registro"
-        android:layout_marginTop="15dp"
-        android:text="Al registrarte aceptas los términos y condiciones de uso"
-        android:id="@+id/textView"
-        android:layout_gravity="center_horizontal" />
+        android:layout_below="@+id/tipo"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:checked="false"
+        android:text="Al registrarte aceptas los términos y condiciones de uso" />
+
+
+
 
 </RelativeLayout>
-
 
 

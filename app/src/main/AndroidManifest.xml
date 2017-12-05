@@ -18,9 +18,13 @@
         </activity>
         <activity android:name="com.example.usuario.prueba1.LogIn" />
         <activity android:name="com.example.usuario.prueba1.MainActivity" />
-        <activity android:name="com.example.usuario.prueba1.Ventas" />
         <activity android:name="com.example.usuario.prueba1.Perfil" />
-        <activity android:name="com.example.usuario.prueba1.Anuncios"/>
+        <activity android:name="com.example.usuario.prueba1.Anuncios" />
+        <activity android:name="com.example.usuario.prueba1.Rpedidos" />
+        <activity android:name="com.example.usuario.prueba1.MenuInicio" />
+        <activity android:name="com.example.usuario.prueba1.Epedido" />
+        <activity android:name="com.example.usuario.prueba1.Mpedidos" />
+        <activity android:name="com.example.usuario.prueba1.Proyecto"/>
     </application>
 
 </manifest>

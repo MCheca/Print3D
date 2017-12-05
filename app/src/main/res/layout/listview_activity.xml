@@ -20,21 +20,21 @@
         android:padding="7dp">
 
         <TextView
-            android:id="@+id/listview_item_title"
+            android:id="@+id/titulo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="20sp"
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/listview_item_short_description"
+            android:id="@+id/descrip"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingTop="5dp"
             android:textSize="12sp" />
 
         <TextView
-            android:id="@+id/listview_presupuesto"
+            android:id="@+id/presu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="15sp"

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    tools:context="com.example.usuario.prueba1.MenuInicio">
+
+
+
+    <TextView
+        android:id="@+id/menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Menú"
+        android:textColor="#000"
+        android:layout_below="@+id/logo"
+        android:layout_marginTop="60dp"
+        android:layout_centerHorizontal="true"
+        android:textSize="35sp"/>
+
+    <Button
+        android:id="@+id/perfil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/menu"
+        android:layout_marginTop="25dp"
+        android:text="Mi Perfil"
+        android:background="@drawable/formabtn"
+        android:textColor="#fff"
+        android:onClick="perfil"
+        android:textSize="25sp"/>
+
+    <Button
+        android:id="@+id/proyec"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/perfil"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/formabtn"
+        android:textColor="#fff"
+        android:onClick="proyecto"
+        android:text="Proyectos"
+        android:textSize="25sp"/>
+
+    <Button
+        android:id="@+id/panuncio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Publicar anuncio"
+        android:background="@drawable/formabtn"
+        android:onClick="add"
+        android:textColor="#fff"
+        android:textSize="25sp"
+        android:layout_below="@+id/proyec"
+        android:layout_marginTop="20dp"/>
+
+
+
+</RelativeLayout>
