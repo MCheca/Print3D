@@ -8,10 +8,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.jumanji.prueba1.R;
+import com.squareup.picasso.Picasso;
 
 import java.util.HashMap;
 
@@ -30,6 +32,11 @@ public class Proyecto extends AppCompatActivity {
         nom=findViewById(R.id.nom);
         des=findViewById(R.id.des);
         presu=findViewById(R.id.pres);
+        ImageView imageView = (ImageView) findViewById(R.id.trabajo1);
+
+        Picasso.with(this)
+                .load("https://target.scene7.com/is/image/Target/18779833?wid=520&hei=520&fmt=pjpeg")
+                .into(imageView);
 
         posi=Anuncios.getPosicion();
         AdministradorOpenHelper admin = new AdministradorOpenHelper(this, "pedidos", null, 2);

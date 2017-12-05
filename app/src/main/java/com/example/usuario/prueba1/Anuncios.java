@@ -50,7 +50,7 @@ public class Anuncios extends AppCompatActivity {
                 HashMap<String, String> hm = new HashMap<String, String>();
                 hm.put("listview_title", fila.getString(1));
                 hm.put("listview_discription",fila.getString(2));
-                hm.put("listview_image", imagen[contador]);
+                hm.put("listview_image", imagen[contador%4]);
                 hm.put("listview_presupuesto", "Presupuesto máximo:\n"+fila.getString(3)+"€");
                 aList.add(hm);
                 contador++;
