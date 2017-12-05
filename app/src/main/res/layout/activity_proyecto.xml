@@ -54,6 +54,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/nom"
         android:layout_marginTop="25dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
         android:layout_centerHorizontal="true"
         android:text="Descripción del proyecto​"
         android:textColor="#000" />

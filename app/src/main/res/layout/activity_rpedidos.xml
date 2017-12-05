@@ -60,14 +60,23 @@
         android:id="@+id/desc2" />
 
 
-
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/desc2"
+        android:layout_marginTop="5dp"
+        android:hint="URL de la imagen"
+        android:maxLength="280"
+        android:inputType="text"
+        android:ems="10"
+        android:id="@+id/img" />
 
     <AutoCompleteTextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Presupuesto"
         android:inputType="number"
-        android:layout_below="@+id/desc2"
+        android:layout_below="@+id/img"
         android:layout_marginTop="5dp"
         android:ems="10"
         android:id="@+id/presupuesto2" />
