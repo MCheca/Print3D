@@ -15,8 +15,8 @@ import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.SimpleCursorAdapter;
 import android.widget.TextView;
+import android.widget.Toast;
 
-import com.example.jumanji.prueba1.R;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -50,7 +50,7 @@ public class Anuncios extends AppCompatActivity {
                 HashMap<String, String> hm = new HashMap<String, String>();
                 hm.put("listview_title", fila.getString(1));
                 hm.put("listview_discription",fila.getString(2));
-                hm.put("listview_image", imagen[contador%4]);
+                hm.put("listview_image", Integer.toString(R.drawable.pieza));
                 hm.put("listview_presupuesto", "Presupuesto máximo:\n"+fila.getString(3)+"€");
                 aList.add(hm);
                 contador++;
@@ -89,6 +89,11 @@ public class Anuncios extends AppCompatActivity {
             });
 
 
+        }
+        else{
+            setContentView(R.layout.vacio2);
+            Toast.makeText(this, "No hay proyectos a realizar",
+                    Toast.LENGTH_SHORT).show();
         }
     }
 

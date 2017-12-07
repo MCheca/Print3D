@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.jumanji.prueba1">
-    <uses-permission android:name="android.permission.INTERNET" />
+    package="com.example.usuario.prueba1">
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,22 +9,27 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.example.usuario.prueba1.Home">
+        <activity
+            android:name=".Home"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.usuario.prueba1.LogIn" />
-        <activity android:name="com.example.usuario.prueba1.MainActivity" />
-        <activity android:name="com.example.usuario.prueba1.Perfil" />
-        <activity android:name="com.example.usuario.prueba1.Anuncios" />
-        <activity android:name="com.example.usuario.prueba1.Rpedidos" />
-        <activity android:name="com.example.usuario.prueba1.MenuInicio" />
-        <activity android:name="com.example.usuario.prueba1.Epedido" />
-        <activity android:name="com.example.usuario.prueba1.Mpedidos" />
-        <activity android:name="com.example.usuario.prueba1.Proyecto"/>
+        <activity android:name=".LogIn" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".Anuncios" />
+        <activity android:name=".Perfil" />
+        <activity android:name=".Rpedidos" />
+        <activity android:name=".MenuInicio" />
+        <activity android:name=".Mpedidos" />
+        <activity android:name=".Proyecto" />
+        <activity android:name=".MProyecto" />
+        <activity android:name=".Usuarios" />
+        <activity android:name=".PerfilUsu" />
+        <activity android:name=".BuscaUsu"/>
     </application>
 
 </manifest>

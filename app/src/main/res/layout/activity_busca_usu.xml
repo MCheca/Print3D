@@ -1,0 +1,68 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    tools:context="com.example.usuario.prueba1.BuscaUsu">
+
+    <include layout="@layout/barra"/>
+    <TextView
+        android:id="@+id/buscalo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Busca un usuario"
+        android:layout_marginTop="89dp"
+        android:textColor="#000"
+        android:textSize="40sp"
+        android:textStyle="bold" />
+    <EditText
+        android:id="@+id/busu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buscalo"
+        android:hint="Nombre del usuario"
+        android:inputType="text"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:layout_marginTop="25dp" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/busu"
+        android:id="@+id/botones"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true">
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Impresor"
+            android:textSize="25sp"
+            android:id="@+id/impresor"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Interesado"
+            android:textSize="25sp"
+            android:id="@+id/interesado"/>
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/busca"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/botones"
+        android:text="Busca!"
+        android:textStyle="bold"
+        android:background="@drawable/formabtn"
+        android:textColor="#FFFFFF"
+        android:textSize="25sp" />
+
+</RelativeLayout>

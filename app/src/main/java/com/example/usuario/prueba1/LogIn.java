@@ -10,7 +10,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.jumanji.prueba1.R;
 
 public class LogIn extends AppCompatActivity {
 

@@ -8,11 +8,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-import com.example.jumanji.prueba1.R;
-
 public class Perfil extends AppCompatActivity {
 
-    private TextView usuario,correo;
+    private TextView usuario,correo,cuent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,26 +20,26 @@ public class Perfil extends AppCompatActivity {
             setContentView(R.layout.activity_perfil);
             String corr=LogIn.getUser().getCorreo();
             String nombre=LogIn.getUser().getNombre();
+            String cuenta=LogIn.getUser().getCuenta();
             usuario=findViewById(R.id.usuario5);
             correo=findViewById(R.id.contacto);
+            cuent=findViewById(R.id.cuenta);
             usuario.setText(nombre);
             correo.setText(corr);
+            cuent.setText(cuenta);
         }
         else{
             setContentView(R.layout.activity_perfil);
             String corr=LogIn.getUser().getCorreo();
             String nombre=LogIn.getUser().getNombre();
+            String cuenta=LogIn.getUser().getCuenta();
             usuario=findViewById(R.id.usuario5);
             correo=findViewById(R.id.contacto);
+            cuent=findViewById(R.id.cuenta);
             usuario.setText(nombre);
             correo.setText(corr);
+            cuent.setText(cuenta);
         }
-    }
-
-
-    public void anuncios(View v){
-        Intent registro2 = new Intent(Perfil.this, Epedido.class);
-        startActivity(registro2);
     }
 
     public void mios (View v){
@@ -49,22 +47,6 @@ public class Perfil extends AppCompatActivity {
         startActivity(registro2);
     }
 
-
-    //Metodo que abre Pop Up
-    public void PopUp(View v){
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setMessage("pepeviyuela@gmail.com")
-                .setTitle("Su email")
-                .setCancelable(false)
-                .setNeutralButton("Aceptar",
-                        new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int id) {
-                                dialog.cancel();
-                            }
-                        });
-        AlertDialog alert = builder.create();
-        alert.show();
-    }
 
     public void menu(View v){
         Intent registro =new Intent(Perfil.this, MenuInicio.class);

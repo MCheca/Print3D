@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
 
-import com.example.jumanji.prueba1.R;
 
 public class MenuInicio extends AppCompatActivity {
 
@@ -28,6 +27,11 @@ public class MenuInicio extends AppCompatActivity {
 
     public void perfil(View v){
         Intent registro2 = new Intent(MenuInicio.this, Perfil.class);
+        startActivity(registro2);
+    }
+
+    public void usuario(View v){
+        Intent registro2 = new Intent(MenuInicio.this, Usuarios.class);
         startActivity(registro2);
     }
 }

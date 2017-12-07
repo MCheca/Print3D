@@ -5,8 +5,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import com.example.jumanji.prueba1.R;
-
 
 public class Home extends AppCompatActivity {
 

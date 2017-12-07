@@ -8,11 +8,10 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
-
-import com.example.jumanji.prueba1.R;
-
+import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -23,7 +22,7 @@ public class Mpedidos extends AppCompatActivity {
     ArrayList<String> listviweShortDescription = new ArrayList<String>();
     ArrayList<String> listviewPresupuesto = new ArrayList<String>();*/
     String[] imagen = new String[]{Integer.toString(R.drawable.yodaicono),Integer.toString(R.drawable.kirby),Integer.toString(R.drawable.mario),Integer.toString(R.drawable.yoshi)};
-
+    private static int posicion;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,7 +44,7 @@ public class Mpedidos extends AppCompatActivity {
                 HashMap<String, String> hm = new HashMap<String, String>();
                 hm.put("listview_title", fila.getString(1));
                 hm.put("listview_discription",fila.getString(2));
-                hm.put("listview_image", imagen[contador]);
+                hm.put("listview_image", Integer.toString(R.drawable.pieza));
                 hm.put("listview_presupuesto", "Presupuesto máximo:\n"+fila.getString(3)+"€");
                 aList.add(hm);
                 contador++;
@@ -64,7 +63,20 @@ public class Mpedidos extends AppCompatActivity {
             ViewGroup header = (ViewGroup) inflater.inflate(R.layout.listview_headermpedidos, androidListView, false);
             androidListView.addHeaderView(header);
 
+            androidListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                    //  Position contiene la posicion del item seleccionado
+                    posicion=position;
+                    Intent myIntent = new Intent(Mpedidos.this, MProyecto.class);
+                    startActivityForResult(myIntent,0);
+                }
+            });
 
+        }
+        else{
+            setContentView(R.layout.vacio);
+            Toast.makeText(this, "No has hecho ningún pedido",
+                    Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -72,5 +84,9 @@ public class Mpedidos extends AppCompatActivity {
     public void menu(View v){
         Intent registro =new Intent(Mpedidos.this, MenuInicio.class);
         startActivity(registro);
+    }
+
+    public static int getPosicion(){
+        return posicion;
     }
 }

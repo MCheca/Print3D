@@ -21,15 +21,14 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginTop="100dp"
-        app:srcCompat="@drawable/yodaicono" />
+        app:srcCompat="@drawable/pieza" />
 
     <Button
         android:id="@+id/usu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_below="@+id/pres"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="480dp"
         android:background="@drawable/formabtn"
         android:text="Contactar"
         android:textSize="20dp"
@@ -53,7 +52,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/nom"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="15dp"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
         android:layout_centerHorizontal="true"
@@ -64,12 +63,23 @@
         android:id="@+id/pres"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/des"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="38dp"
+        android:layout_marginTop="405dp"
         android:text="TextView"
+        android:textColor="#1b4eb4"
         android:textAlignment="center"
         android:textSize="30sp"
         android:textStyle="bold"/>
 
+    <TextView
+        android:id="@+id/cont"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="455dp"
+        android:text="Contacta con:"
+        android:textAlignment="center"
+        android:textColor="#000"
+        android:textSize="15sp"
+        android:textStyle="bold"/>
 </RelativeLayout>
