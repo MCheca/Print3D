@@ -1,0 +1,84 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingBottom="1dp"
+    tools:context="com.example.usuario.prueba1.PerfilUsu">
+
+
+    <ImageView
+        android:id="@+id/header_cover_image"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/header"
+        app:srcCompat="@drawable/header" />
+    <include layout="@layout/barra"/>
+
+    <ImageView
+        android:id="@+id/foto"
+        android:layout_width="240dp"
+        android:layout_height="120dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="89dp"
+        android:adjustViewBounds="false"
+        android:cropToPadding="false"
+        android:src="@drawable/usuario"
+        android:visibility="visible" />
+
+
+
+    <Button
+        android:id="@+id/pedidos"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="450dp"
+        android:layout_marginBottom="17dp"
+        android:background="@drawable/formabtn"
+        android:text="Contactar"
+        android:textColor="#FFF"
+        android:textSize="20sp"
+        android:layout_centerHorizontal="true"
+        android:onClick="mail"/>
+    <TextView
+        android:id="@+id/nombre"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/foto"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:textColor="#000"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:textAlignment="center"/>
+
+
+
+    <TextView
+        android:id="@+id/correo"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nombre"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/cuenta"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/correo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="20sp"/>
+
+</RelativeLayout>
