@@ -90,7 +90,7 @@ public class Usuarios extends AppCompatActivity {
 
         }
         else{
-            setContentView(R.layout.vacio);
+            setContentView(R.layout.listview_headerusuarios);
             Toast.makeText(this, "No hay usuarios registrados",
                     Toast.LENGTH_SHORT).show();
         }

@@ -29,7 +29,8 @@
         <activity android:name=".MProyecto" />
         <activity android:name=".Usuarios" />
         <activity android:name=".PerfilUsu" />
-        <activity android:name=".BuscaUsu"/>
+        <activity android:name=".BuscaUsu" />
+        <activity android:name=".Buscados"></activity>
     </application>
 
 </manifest>
