@@ -28,7 +28,7 @@
         android:layout_alignParentRight="true"
         android:layout_marginRight="25dp"
         android:background="@android:color/transparent"
-        android:onClick="busca"
+        android:onClick="buscar"
         android:src="@drawable/lupa" />
 
 </RelativeLayout>

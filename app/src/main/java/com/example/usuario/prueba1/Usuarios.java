@@ -101,6 +101,10 @@ public class Usuarios extends AppCompatActivity {
         Intent registro =new Intent(this, MenuInicio.class);
         startActivity(registro);
     }
+    public void buscar(View v){
+        Intent busc =new Intent(this, BuscaUsu.class);
+        startActivity(busc);
+    }
 
     public static int getPosicion(){
         return posicion;
@@ -113,14 +117,14 @@ public class Usuarios extends AppCompatActivity {
     public static String getCo(){return co;}
     public static String getCu(){return cu;}
 
-    public void busca(View v){
+   /* public void busca(View v){
         hola=true;
         setContentView(R.layout.activity_usuarios);
 
         nombre = new ArrayList<String>();
         correo = new ArrayList<String>();
         cuenta = new ArrayList<String>();
-        String busca=buscar.getText().toString();
+        String busca=BuscaUsu.getNom();
         imagen = findViewById(R.id.listview_image);
         List<HashMap<String, String>> aList = new ArrayList<HashMap<String, String>>();
 
@@ -178,5 +182,5 @@ public class Usuarios extends AppCompatActivity {
             Toast.makeText(this, "No hay usuarios registrados",
                     Toast.LENGTH_SHORT).show();
         }
-    }
+    }*/
 }
