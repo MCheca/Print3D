@@ -38,6 +38,8 @@ public class Buscados extends AppCompatActivity {
         correo = new ArrayList<String>();
         cuenta = new ArrayList<String>();
         busca=BuscaUsu.getNom();
+        Toast.makeText(this, "Estas buscando '"+busca+"'",
+                Toast.LENGTH_SHORT).show();
         tipo=BuscaUsu.getTipo();
         imagen = findViewById(R.id.listview_image);
         List<HashMap<String, String>> aList = new ArrayList<HashMap<String, String>>();
@@ -45,19 +47,19 @@ public class Buscados extends AppCompatActivity {
         AdministradorOpenHelper admin = new AdministradorOpenHelper(this, "usuarios", null, 2);
         SQLiteDatabase bd = admin.getWritableDatabase();
         Cursor fila  = bd.rawQuery(
-                    "select usuario, email,cuenta from usuarios where usuario like'%" + busca + "%' and cuenta='"+tipo+"'", null);
+                "select usuario, email,cuenta from usuarios where usuario like'%" + busca + "%' and cuenta='"+tipo+"'", null);
         if (fila.moveToFirst()) {
             //Recorremos todos los registros hasta que no hayan mas
             do {
-                    HashMap<String, String> hm = new HashMap<String, String>();
-                    hm.put("listview_image", Integer.toString(R.drawable.usuario));
-                    hm.put("listview_title", "\n" + fila.getString(0));
-                    hm.put("listview_discription", fila.getString(1));
-                    hm.put("listview_presupuesto", fila.getString(2));
-                    nombre.add(fila.getString(0));
-                    correo.add(fila.getString(1));
-                    cuenta.add(fila.getString(2));
-                    aList.add(hm);
+                HashMap<String, String> hm = new HashMap<String, String>();
+                hm.put("listview_image", Integer.toString(R.drawable.usuario));
+                hm.put("listview_title", "\n" + fila.getString(0));
+                hm.put("listview_discription", fila.getString(1));
+                hm.put("listview_presupuesto", fila.getString(2));
+                nombre.add(fila.getString(0));
+                correo.add(fila.getString(1));
+                cuenta.add(fila.getString(2));
+                aList.add(hm);
             }
             while (fila.moveToNext());
 

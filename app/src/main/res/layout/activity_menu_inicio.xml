@@ -18,7 +18,7 @@
         android:text="Menú"
         android:textColor="#000"
         android:layout_below="@+id/logo"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="40dp"
         android:layout_centerHorizontal="true"
         android:textSize="35sp"/>
 
@@ -73,5 +73,18 @@
         android:textSize="25sp"
         android:layout_below="@+id/panuncio"
         android:layout_marginTop="20dp"/>
+    <Button
+        android:id="@+id/cierra"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Cerrar sesión"
+        android:background="@drawable/formabtn"
+        android:onClick="cerrar"
+        android:textColor="#fff"
+        android:textSize="25sp"
+        android:layout_below="@+id/usuarios"
+        android:layout_marginTop="20dp"/>
+
 
 </RelativeLayout>

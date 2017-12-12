@@ -34,4 +34,9 @@ public class MenuInicio extends AppCompatActivity {
         Intent registro2 = new Intent(MenuInicio.this, Usuarios.class);
         startActivity(registro2);
     }
+
+    public void cerrar(View v){
+        Intent cierra = new Intent(MenuInicio.this, Home.class);
+        startActivity(cierra);
+    }
 }

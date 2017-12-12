@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.RadioButton;
 import android.widget.Toast;
 
 
@@ -18,6 +19,8 @@ public class MainActivity extends AppCompatActivity {
 
     private EditText user,email,email2,pass,pass2,tipo;
     private CheckBox acepto;
+    private RadioButton imp;
+    private RadioButton inte;
 
 
     @Override
@@ -30,7 +33,8 @@ public class MainActivity extends AppCompatActivity {
         email2=(EditText)findViewById(R.id.email2);
         pass=(EditText)findViewById(R.id.pass);
         pass2=(EditText)findViewById(R.id.pass2);
-        tipo=(EditText)findViewById(R.id.tipo);
+        imp=(RadioButton) findViewById(R.id.impr);
+        inte=(RadioButton) findViewById(R.id.inte);
         acepto=findViewById(R.id.checkBox);
 
     }
@@ -39,7 +43,8 @@ public class MainActivity extends AppCompatActivity {
     //Metodo que da de alta a un usuario en el registro
 
     public void registro(View v) {
-
+        imp=(RadioButton) findViewById(R.id.impr);
+        inte=(RadioButton) findViewById(R.id.inte);
         //Trae la tabla
 
         AdministradorOpenHelper admin = new AdministradorOpenHelper(this,
@@ -54,21 +59,25 @@ public class MainActivity extends AppCompatActivity {
         String correo2 = email2.getText().toString();
         String cont = pass.getText().toString();
         String cont2 = pass2.getText().toString();
-        String cuenta = tipo.getText().toString();
+        //String cuenta = tipo.getText().toString();
 
         if(!nombre.equals("")) {
             if(!correo.equals("")) {
                 if (!cont.equals("")) {
                     if (correo.equalsIgnoreCase(correo2)) {
                         if (cont.equals(cont2)) {
-                            if (cuenta.equalsIgnoreCase("Impresor") || cuenta.equalsIgnoreCase("Interesado")) {
                                if(acepto.isChecked()) {
                                    if (consultasiexiste(correo)) {
                                        ContentValues registrar = new ContentValues();
                                        registrar.put("usuario", nombre);
                                        registrar.put("email", correo);
                                        registrar.put("contraseña", cont);
-                                       registrar.put("cuenta", cuenta);
+                                       if(imp.isChecked()) {
+                                           registrar.put("cuenta", "Impresor");
+                                       }
+                                       else{
+                                           registrar.put("cuenta", "Interesado");
+                                       }
 
                                        bd.insert("usuarios", null, registrar);
 
@@ -78,7 +87,6 @@ public class MainActivity extends AppCompatActivity {
                                        email2.setText("");
                                        pass.setText("");
                                        pass2.setText("");
-                                       tipo.setText("");
 
 
                                        Toast.makeText(this, "Registro completado",
@@ -98,10 +106,6 @@ public class MainActivity extends AppCompatActivity {
                                    Toast.makeText(this, "No has aceptado los terminos",
                                            Toast.LENGTH_SHORT).show();
                                }
-                            } else {
-                                Toast.makeText(this, "Debes ser: Impresor o Interesado",
-                                        Toast.LENGTH_SHORT).show();
-                            }
 
                         } else {
                             Toast.makeText(this, "Los contraseñas no coinciden",

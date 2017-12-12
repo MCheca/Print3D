@@ -87,17 +87,28 @@
         android:maxLines="1"
         android:singleLine="true" />
 
-    <EditText
-        android:id="@+id/tipo"
-        android:layout_width="match_parent"
+    <RadioGroup
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="Impresor/Interesado"
         android:layout_below="@+id/pass2"
-        android:layout_marginTop="5dp"
-        android:imeOptions="actionUnspecified"
-        android:inputType="text"
-        android:maxLines="1"
-        android:singleLine="true" />
+        android:id="@+id/tipo"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true">
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Impresor"
+            android:textSize="25sp"
+            android:checked="true"
+            android:id="@+id/impr"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Interesado"
+            android:textSize="25sp"
+            android:id="@+id/inte"/>
+    </RadioGroup>
 
     <Button
         android:id="@+id/registro"

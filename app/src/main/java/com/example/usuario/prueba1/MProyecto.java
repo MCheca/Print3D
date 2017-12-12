@@ -26,7 +26,7 @@ public class MProyecto extends AppCompatActivity {
         des=findViewById(R.id.des);
         presu=findViewById(R.id.pres);
 
-        posi=Anuncios.getPosicion();
+        posi=Mpedidos.getPosicion();
         AdministradorOpenHelper admin = new AdministradorOpenHelper(this, "pedidos", null, 2);
         SQLiteDatabase bd = admin.getWritableDatabase();
 

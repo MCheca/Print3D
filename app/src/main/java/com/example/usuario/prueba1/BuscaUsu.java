@@ -57,4 +57,9 @@ public class BuscaUsu extends AppCompatActivity {
     public static String getTipo() {
         return tipo;
     }
+
+    public void menu(View v){
+        Intent registro =new Intent(this, MenuInicio.class);
+        startActivity(registro);
+    }
 }

@@ -120,14 +120,12 @@ public class Usuarios extends AppCompatActivity {
    /* public void busca(View v){
         hola=true;
         setContentView(R.layout.activity_usuarios);
-
         nombre = new ArrayList<String>();
         correo = new ArrayList<String>();
         cuenta = new ArrayList<String>();
         String busca=BuscaUsu.getNom();
         imagen = findViewById(R.id.listview_image);
         List<HashMap<String, String>> aList = new ArrayList<HashMap<String, String>>();
-
         AdministradorOpenHelper admin = new AdministradorOpenHelper(this, "usuarios", null, 2);
         SQLiteDatabase bd = admin.getWritableDatabase();
         Cursor fila = fila = bd.rawQuery(
@@ -151,19 +149,15 @@ public class Usuarios extends AppCompatActivity {
                 aList.add(hm);
             }
             while (fila.moveToNext());
-
             String[] from = {"listview_image", "listview_title", "listview_discription", "listview_presupuesto"};
             int[] to = {R.id.listview_image, R.id.nombre, R.id.correo, R.id.cuenta};
-
             SimpleAdapter simpleAdapter = new SimpleAdapter(getBaseContext(), aList, R.layout.listview_usuarios, from, to);
             ListView androidListView = (ListView) findViewById(R.id.list_view);
             androidListView.setAdapter(simpleAdapter);
-
             // Que pone el header al list view tambien
             LayoutInflater inflater = getLayoutInflater();
             ViewGroup header = (ViewGroup) inflater.inflate(R.layout.listview_headerusuarios, androidListView, false);
             androidListView.addHeaderView(header);
-
             androidListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                     //  Position contiene la posicion del item seleccionado
@@ -171,12 +165,10 @@ public class Usuarios extends AppCompatActivity {
                     n = nombre.get(position - 1);
                     co = correo.get(position - 1);
                     cu = cuenta.get(position - 1);
-
                     Intent myIntent = new Intent(Usuarios.this, PerfilUsu.class);
                     startActivityForResult(myIntent, 0);
                 }
             });
-
         } else {
             setContentView(R.layout.vacio);
             Toast.makeText(this, "No hay usuarios registrados",
